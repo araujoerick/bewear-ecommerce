@@ -1,3 +1,4 @@
+import Header from "@/components/common/header";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import SignInForm from "./components/sign-in-form";
@@ -5,8 +6,10 @@ import SignUpForm from "./components/sign-up-form";
 
 const AuthenticationPage = () => {
   return (
-    <div className="flex h-screen items-center justify-center">
-      <div className="flex w-full max-w-sm flex-col gap-6 p-4">
+    <>
+      <Header />
+
+      <div className="flex w-full flex-1 flex-col justify-center gap-6 p-5">
         <Tabs defaultValue="sign-in">
           <TabsList>
             <TabsTrigger value="sign-in">Entrar</TabsTrigger>
@@ -20,7 +23,7 @@ const AuthenticationPage = () => {
           </TabsContent>
         </Tabs>
       </div>
-    </div>
+    </>
   );
 };
 
